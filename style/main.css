@@ -1,0 +1,230 @@
+/*------------------------config------------------------*/
+:root {
+    --bg-color: #F0F2F5;
+    --card-color: #FFFFFF;
+    --text-main: #000000;
+    --text-muted: #666666;
+    --border-radius: 16px;
+    --shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    margin: 0;
+    padding: 20px 40px 100px 40px;
+}
+
+/*------------------------header------------------------*/
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin-bottom: 30px;
+}
+
+#titre {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+header img {
+    height: 7em;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header h2 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+/*------------------------main------------------------*/
+main {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/*------------------------graphique------------------------*/
+.solde-container {
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.solde-info {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.solde-titre {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    letter-spacing: 1px;
+    font-weight: 600;
+}
+
+#solde-montant {
+    font-size: 3rem;
+    font-weight: 700;
+    margin: 5px 0 0 0;
+}
+
+.chart-container {
+    width: 100%;
+    height: 120px;
+}
+
+/*------------------------boutons------------------------*/
+.boutons {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+}
+
+.boutons button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    padding: 18px 30px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+#ajout {
+    background-color: #000000;
+    color: #FFFFFF;
+    border: none;
+}
+
+#ajout:hover {
+    background-color: #222222;
+    transform: translateY(-2px);
+}
+
+#suppression {
+    background-color: transparent;
+    color: #000000;
+    border: 2px solid #D1D1D6;
+}
+
+#suppression:hover {
+    background-color: #E5E5EA;
+    transform: translateY(-2px);
+}
+
+/*------------------------tableau------------------------*/
+.table-transactions {
+    grid-column: 1 / -1;
+    background-color: var(--card-color);
+    border-radius: var(--border-radius);
+    padding: 30px;
+    box-shadow: var(--shadow);
+    border-collapse: separate;
+    border-spacing: 0 12px;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.table-transactions thead th {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-align: left;
+    padding: 0 20px;
+}
+
+.table-transactions th:last-child, 
+.table-transactions td:last-child {
+    text-align: right;
+}
+
+.table-transactions tbody tr {
+    background-color: #F8F9FA;
+    transition: transform 0.2s ease;
+}
+
+.table-transactions tbody tr:hover {
+    transform: scale(1.01);
+}
+
+.table-transactions td {
+    padding: 18px 20px;
+    font-size: 0.95rem;
+}
+
+.table-transactions td:first-child {
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.table-transactions td:last-child {
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    font-weight: 700;
+}
+
+.montant-positif {
+    color: #24a148;
+}
+.montant-negatif {
+    color: #000000;
+}
+
+/*------------------------footer------------------------*/
+footer {
+    background-color: #1C1C1E;
+    color: #FFFFFF;
+    padding: 15px 40px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.85rem;
+}
+
+footer p {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+footer img {
+    height: 18px;
+    margin-right: 8px;
+}
+
+footer a {
+    color: #0A84FF;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}

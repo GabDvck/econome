@@ -1,0 +1,141 @@
+@media (max-width: 768px) {
+    
+    body {
+        padding: 15px;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    #titre {
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header h2 {
+        font-size: 1.3rem;
+        font-weight: 700;
+        align-self: center;
+        width: 100%;
+        text-align: center;
+        margin-top: 10px;
+    }
+
+    main {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .solde-container {
+        padding: 20px;
+    }
+
+    #solde-montant {
+        font-size: 2.4rem;
+    }
+
+    .boutons {
+        width: 100%;
+        gap: 12px;
+    }
+
+    .boutons button {
+        width: 100%;
+        padding: 15px;
+        font-size: 0.95rem;
+    }
+
+    .table-transactions {
+        background-color: transparent;
+        box-shadow: none;
+        padding: 0;
+        border-spacing: 0;
+    }
+
+    .table-transactions thead {
+        display: none;
+    }
+
+    .table-transactions, 
+    .table-transactions tbody, 
+    .table-transactions tr, 
+    .table-transactions td {
+        display: block;
+        width: 100%;
+    }
+
+    .table-transactions tbody tr {
+        display: grid;
+        grid-template-areas:
+            "icon desc montant"
+            "icon date cat";
+        grid-template-columns: auto 1fr auto;
+        gap: 2px 12px;
+        background-color: var(--card-color);
+        padding: 14px 16px;
+        margin-bottom: 12px;
+        border-radius: var(--border-radius);
+        box-shadow: var(--shadow);
+        align-items: center;
+    }
+
+    .table-transactions td:nth-child(1) { 
+        grid-area: date; 
+        padding: 0;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+    }
+
+    .table-transactions td:nth-child(2) { 
+        grid-area: desc; 
+        padding: 0;
+        display: contents; 
+    }
+
+    .table-transactions td:nth-child(2) img,
+    .table-transactions td:nth-child(2) i { 
+        grid-area: icon; 
+        height: 32px;
+        width: 32px;
+        margin: 0;
+    }
+
+    .table-transactions td:nth-child(2) span {
+        grid-area: desc;
+        font-weight: 600;
+        font-size: 0.95rem;
+        color: var(--text-main);
+    }
+
+    .table-transactions td:nth-child(3) { 
+        grid-area: cat; 
+        padding: 0;
+        font-size: 0.75rem;
+        color: var(--text-muted);
+        text-align: right;
+    }
+
+    .table-transactions td:nth-child(4) { 
+        grid-area: montant; 
+        padding: 0;
+        font-weight: 600;
+        font-size: 0.95rem;
+        text-align: right;
+    }
+
+    .table-transactions td:first-child,
+    .table-transactions td:last-child {
+        border-radius: 0;
+    }
+
+    footer {
+        display: none;
+    }
+}
