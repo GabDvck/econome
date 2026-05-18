@@ -193,6 +193,33 @@ main {
     color: #000000;
 }
 
+
+.btn-delete {
+    background: none;         
+    border: none;             
+    color: #C7C7CC;         
+    font-size: 1.4rem;       
+    font-weight: 400;
+    cursor: pointer;         
+    padding: 0 4px;          
+    margin-left: 12px;        
+    line-height: 1;           
+    display: inline-block;
+    vertical-align: middle;   
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-delete:hover {
+    color: #FF3B30;       
+    transform: scale(1.2);  
+}
+
+.table-transactions td:last-child {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
 /*------------------------footer------------------------*/
 footer {
     background-color: #1C1C1E;
