@@ -9,6 +9,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
         <link rel="shortcut icon" href="img/512X512.png">
         <link rel="manifest" href="manifest.json">
+        <script src="js/libs/chart.umd.min.js" defer></script>
         <script src="js/app.js" type="module"></script>
         <script src="service-worker.js" defer></script>
         <link rel="apple-touch-icon" href="img/512X512.png">
@@ -34,7 +35,7 @@
                     <h3 id="solde-montant"></h3>
                 </div>
                 <div class="chart-container">
-                    <canvas id="graphique"></canvas>
+                    <canvas id="graphique" aria-label="chart" role="img"></canvas>
                 </div>
             </div>
 
